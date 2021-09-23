@@ -1,23 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
+import Nav from "./components/Nav";
+import {useState} from "react";
+import AllPosts from "./components/AllPosts";
+import CreatePost from "./components/CreatePost";
+import DeletePost from "./components/DeletePost";
+import MyPosts from "./components/MyPosts";
 
 function App() {
+
+    const [state, setState] = useState('All posts')
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <Nav state={state} setState={setState} />
+        {     state === 'All posts' ? <AllPosts />
+            : state === 'Create post' ? <CreatePost />
+            : state === 'Delete post' ? <DeletePost />
+            : state === 'My posts' ? <MyPosts /> : null
+        }
     </div>
   );
 }

@@ -1,38 +1,151 @@
-.App {
-  text-align: center;
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+nav {
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    background: #ffffff;
+}
+ul {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px;
+    box-shadow:  0 2px 2px lightgrey;
+}
+li {
+    list-style: none;
+}
+a {
+    padding: 5px 10px;
+    text-decoration: none;
+    color: Blue;
+    transition: .25s;
+    text-align: center;
+}
+a:hover {
+    opacity: 0.7;
+}
+.loader {
+    position: absolute;
+    width: 10%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.loader2 {
+    width: 20%;
+}
+.loader3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.allPosts, .createPost, .deletePost, .myPosts {
+    padding: 40px 10px;
+}
+.allPosts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.postWrapper {
+    max-width: 300px;
+    margin: 10px;
+    padding: 5px;
+    box-shadow:  0 4px 10px grey;
+}
+.postWrapper h3 {
+    padding: 5px 0;
+}
+.createPost {
+
+}
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 50px auto 0;
+    padding: 15px;
+    box-shadow: 0 4px 8px grey;
+}
+input, form textarea {
+    padding: 5px 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+form textarea {
+    resize: vertical;
+    font-weight: normal;
+    margin: 20px 0;
+}
+button {
+    align-self: center;
+    padding: 5px;
+    font-weight: bold;
+    background: cornflowerblue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: .25s;
+}
+button:hover {
+    box-shadow: 0 2px 4px black;
+}
+button:active {
+    box-shadow: 0 1px 2px black;
+}
+button:disabled {
+    box-shadow: none;
+    background: cornflowerblue;
+}
+.container {
+    position: relative
+}
+ion-icon {
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    background: red;
+    border-radius: 50%;
+    font-size: 20px;
+    --ionicon-stroke-width: 60px;
+    color: white;
+    transition: .25s;
+}
+.shaking {
+    animation: shake .25s ease infinite;
+}
+@keyframes shake {
+    0% {
+        transform: rotate(-1deg);
+    }
+    50% {
+        transform: rotate(1deg);
+    }
+    100% {
+        transform: rotate(-1deg);
+    }
+}
+.delete {
+    animation: none;
+    opacity: 0.5;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.myPosts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.myPosts input {
+    max-width: 300px;
+    margin: 10px 0;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.usersPosts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
