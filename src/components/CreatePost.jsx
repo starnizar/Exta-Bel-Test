@@ -20,7 +20,7 @@ const CreatePost = () => {
         event.preventDefault()
         setLoading(true)
         try {
-            const response = await fetch('http://jsonplaceholder.typicode.com/posts', {
+            const response = await fetch('https://jsonplaceholder.typicode.com/posts', {
                 method: 'post',
                 body: JSON.stringify({
                     title: state.title,

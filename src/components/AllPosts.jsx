@@ -9,7 +9,7 @@ const AllPosts = () => {
     useEffect(() => {
         (async function () {
             setLoading(true)
-            const response = await fetch('http://jsonplaceholder.typicode.com/posts')
+            const response = await fetch('https://jsonplaceholder.typicode.com/posts')
             const result = await response.json()
             setTimeout(() => {
                 setPosts(result)
