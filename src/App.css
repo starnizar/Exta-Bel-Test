@@ -16,16 +16,15 @@ ul {
     box-shadow:  0 2px 2px lightgrey;
 }
 li {
+    cursor: pointer;
     list-style: none;
-}
-a {
     padding: 5px 10px;
     text-decoration: none;
     color: Blue;
     transition: .25s;
     text-align: center;
 }
-a:hover {
+li:hover {
     opacity: 0.7;
 }
 .loader {
@@ -45,7 +44,7 @@ a:hover {
     transform: translate(-50%, -50%);
 }
 .allPosts, .createPost, .deletePost, .myPosts {
-    padding: 40px 10px;
+    padding: 60px 10px;
 }
 .allPosts {
     display: flex;

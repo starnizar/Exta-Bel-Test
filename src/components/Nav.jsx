@@ -13,14 +13,12 @@ const Nav = ({state, setState}) => {
         <nav>
             <ul>
                 {routes.map((route, index) => (
-                    <li key={index}>
-                        <a
-                            style={(state === route) ? {borderBottom: '3px solid black'} : null}
-                            onClick={() => setState(route)}
-                            href="#"
-                        >
-                            {route}
-                        </a>
+                    <li
+                        key={index}
+                        style={(state === route) ? {borderBottom: '3px solid black'} : null}
+                        onClick={() => setState(route)}
+                    >
+                        {route}
                     </li>
                 ))}
             </ul>
